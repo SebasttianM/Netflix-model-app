@@ -1,21 +1,26 @@
-let movies = document.querySelector('movies');
-let card = document.getElementsByClassName('videosCard');
-let popular= document.getElementById('popular').value;
-let anime= document.getElementById('anime').value;
-let crime= document.getElementById('crime').value;
+let movies = document.querySelector("movies");
+let card = document.getElementsByClassName("videosCard");
+let popular = document.getElementById("popular").value;
+let anime = document.getElementById("anime").value;
+let crime = document.getElementById("crime").value;
 
+const getMovies = (url) => {
+  const showMovie = document.querySelector("videosCard");
+  showMovie.innerHTML = "";
+  fetch(url)
+  .then((resp) => resp.json())
+  .then((data) => {
+    data.forEach(movie => {
+      const { image } = movie;
+      showMovie.innerHTML += `
+			<div class='popularMovies'>
+				<img src="${image}" class="movieReel" alt="pop">
+			`;
+		console.log(data)
+    })
+  })
+}
 
-function fillMovie (e, =>{
-    const respose = fetch("https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=tt2935510", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "movies-tvshows-data-imdb.p.rapidapi.com",
-		"x-rapidapi-key": "SIGN-UP-FOR-KEY"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+getMovies.addEventListener("click", () =>
+  getMovies("http://localhost:4005/movies")
+);
