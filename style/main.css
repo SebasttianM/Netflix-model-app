@@ -83,3 +83,29 @@ a{
     margin: -50px;
     text-align: center;
 }
+
+.buttons{ 
+    display: -moz-grid-line;
+    width: 7%;
+    grid-auto-columns: 200px;
+    grid-auto-flow:column;
+    justify-content: space-around;
+
+    
+}
+
+#play{
+    margin: 30px;
+    border: red 1px solid;
+    padding: 2%;
+    background-color: azure;
+    display: inline-flex;
+    color: black;
+    font-size: xx-large;
+}
+
+
+.videosCard{
+    display: flex;
+    overflow-x: scroll;
+}
