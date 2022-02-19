@@ -109,3 +109,13 @@ a{
     display: flex;
     overflow-x: scroll;
 }
+
+#form{
+    display: grid;
+    padding: 50vh;
+    margin: 200px;
+    background-color: crimson;
+    color: black;
+    text-align: center;
+    font-size: large;
+}
