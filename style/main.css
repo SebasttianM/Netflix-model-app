@@ -112,10 +112,27 @@ a{
 
 #form{
     display: grid;
-    padding: 50vh;
+    padding: 25vh;
     margin: 200px;
+    width: 10vw;
     background-color: crimson;
     color: black;
     text-align: center;
     font-size: large;
 }
+label{
+    display: block;
+    margin-top: 5em;
+    text-align: center;
+    justify-content: center;
+}
+
+#btnForm{
+    color: #131214;
+    background-color: darkgray;
+    box-shadow: 2px 2px 2px 1px rgb(77, 13, 226);
+    margin-top: 10vh;
+    
+}
+
+
