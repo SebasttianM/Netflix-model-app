@@ -85,11 +85,12 @@ a{
 }
 
 .buttons{ 
-    display: -moz-grid-line;
-    width: 7%;
+    display: -moz-grid;
+    width: 5%;
     grid-auto-columns: 200px;
     grid-auto-flow:column;
     justify-content: space-around;
+    margin-right: 5em;
 
     
 }
@@ -97,11 +98,11 @@ a{
 #play{
     margin: 30px;
     border: red 1px solid;
-    padding: 2%;
+    padding: 1%;
     background-color: azure;
-    display: inline-flex;
+    display:-webkit-inline-flex;
     color: black;
-    font-size: xx-large;
+    font-size: large;
 }
 
 
@@ -135,4 +136,8 @@ label{
     
 }
 
+
+#infoUser{
+    margin-top: 2rem;
+}
 
